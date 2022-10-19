@@ -1,0 +1,53 @@
+<header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Post Add Form</h2>
+    </div>
+</header>
+<main>
+    <div class="flex items-center justify-center p-12">
+        <div class="mx-auto w-full max-w-[550px]">
+            <form *ngIf="post" enctype="multipart/form-data" (ngSubmit)="onHandleAdd()" [formGroup]="postForm"
+                class="col-4">
+                <div class="mb-5">
+                    <label for="title" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Title
+                    </label>
+                    <input type="text" id="post-title" placeholder="title" formControlName="title" name="title"
+                        [(ngModel)]="post.title" name="title" class="w-full rounded-md border border-[#e0e0e0]
+                    bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1]
+                    focus:shadow-md" />
+                </div>
+                <div class="mb-5">
+                    <label for="createAt" class="mb-3 block text-base font-medium text-[#07074D]">
+                        CreateAt
+                    </label>
+                    <input type="date" id="post-createAt" [(ngModel)]="post.createAt" name="createAt"
+                        formControlName="createAt"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+                <div class="mb-5">
+                    <label for="description" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Description
+                    </label>
+                    <input type="text" id="post-description" placeholder="description" [(ngModel)]="post.description"
+                        formControlName="description" name="description"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+                <div class="mb-5">
+                    <label for="thumnail" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Thumnail
+                    </label>
+                    <input type="text" id="post-thumnail" placeholder="thumnail" [(ngModel)]="post.thumnail"
+                        formControlName="thumnail" name="thumnail"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+                <div>
+                    <button
+                        class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

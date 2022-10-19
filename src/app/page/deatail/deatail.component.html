@@ -1,0 +1,13 @@
+<div class="grid grid-cols-2 gap-8">
+    <div class="bg-white px-5 py-8" *ngFor="let item of post">
+        <h3 class="mb-5">
+            <a routerLink="" class="text-2xl font-bold">{{item.title}}</a>
+        </h3>
+        <div class="flex space-x-8 text-[#21243D] mb-5 text-lg">
+            <span>{{item.createAt}}</span>
+            <span>|</span>
+            <span>Design, Pattern</span>
+        </div>
+        <p class="text-base">{{item.description}}</p>
+    </div>
+</div>

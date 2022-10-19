@@ -1,0 +1,100 @@
+<app-header></app-header>
+<section class="info py-10">
+    <div class="max-w-6xl mx-auto px-5">
+        <div class="grid md:grid-cols-3" *ngFor="let item of profile">
+            <div class="md:col-span-2 order-2 md:order-1">
+                <h2 class="text-2xl md:text-5xl font-bold mt-10 md:mt-0 md:leading-[60px]">Hi, I am {{item.name}},
+                    {{item.position}}</h2>
+                <p class="text-base my-5">{{item.description}}</p>
+                <a href="" class="inline-block bg-red-500 py-5 px-10 rounded-sm text-[#FFFFFF]">Download Resume</a>
+            </div>
+            <div class="md:col-span-1 order-1 md:order-2">
+                <img src="{{item.image}}" alt="" class="rounded-full mx-auto md:ml-auto md:mr-0">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="recent-posts bg-[#EDF7FA] py-10">
+    <div class="max-w-6xl mx-auto px-5">
+        <div class="flex justify-center md:justify-between py-5">
+            <h2 class="text-xl">Recent posts</h2>
+            <a href="" class="hisdden md:inline-block text-[#00A8CC]">View all</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8">
+            <div class="bg-white px-5 py-8" *ngFor="let item of post">
+                <h3 class="mb-5">
+                    <a routerLink="detail/{{item.id}}" class="text-2xl font-bold">{{item.title}}</a>
+                </h3>
+                <div class="flex space-x-8 text-[#21243D] mb-5 text-lg">
+                    <span>{{item.createAt}}</span>
+                    <span>|</span>
+                    <span>Design, Pattern</span>
+                </div>
+                <p class="text-base">{{item.description}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="feature-projects">
+    <div class="max-w-6xl mx-auto px-5">
+        <div class="flex justify-center md:justify-between py-5">
+            <h2 class="text-[22px] text-center md:text-left">Featured projects</h2>
+        </div>
+        <div class="project-item grid md:2 grid-cols-[245px,auto] gap-8 border-b py-8">
+            <div>
+                <img src="https://picsum.photos/250/250" alt="" class="w-full rounded-lg">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold">
+                    <a href="" class="text-[#21243D]"></a>Designing Dashboards
+                </h3>
+                <div class="flex space-x-4 items-center py-5">
+                    <span class="inline-block bg-[#142850] py-1 px-2 font-blod text-white rounded-full">2020</span>
+                    <span class="text-[#8695A4]">Dashboard</span>
+                </div>
+                <p class="text-[#21243D]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                    Velit
+                    officia consequat duis enim
+                    velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+        <div class="project-item grid md:2 grid-cols-[245px,auto] gap-8 border-b py-8">
+            <div>
+                <img src="https://picsum.photos/250/250" alt="" class="w-full rounded-lg">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold">
+                    <a href="" class=" text-[#21243D] "></a>Vibrant Portraits of 2020
+                </h3>
+                <div class="flex space-x-4 items-center py-5">
+                    <span class="inline-block bg-[#142850] py-1 px-2 font-blod text-white rounded-full">2018</span>
+                    <span class="text-[#8695A4]">Illustration</span>
+                </div>
+                <p class="text-[#21243D]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                    Velit
+                    officia consequat duis enim
+                    velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+        <div class="project-item grid md:2 grid-cols-[245px,auto] gap-8 border-b py-8">
+            <div>
+                <img src="https://picsum.photos/250/250" alt="" class="w-full rounded-lg">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold">
+                    <a href="" class=" text-[#21243D] "></a>36 Days of Malayalam type
+                </h3>
+                <div class="flex space-x-4 items-center py-5">
+                    <span class="inline-block bg-[#142850] py-1 px-2 font-blod text-white rounded-full">2018</span>
+                    <span class="text-[#8695A4]">Typography</span>
+                </div>
+                <p class="text-[#21243D]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                    Velit
+                    officia consequat duis enim
+                    velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

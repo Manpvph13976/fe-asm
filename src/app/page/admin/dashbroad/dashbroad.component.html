@@ -1,0 +1,56 @@
+<app-header></app-header>
+<nav class="">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center h-16">
+            <div class="flex items-center">
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a routerLink="/admin/list"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                            aria-current="page">User</a>
+
+                        <a routerLink="/admin/#"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Project</a>
+
+                        <a routerLink="/admin/#"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories
+                            Project</a>
+
+                        <a routerLink="/admin/post"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Post</a>
+
+                        <a routerLink="/admin/#"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Category
+                            Posts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a routerLink="/admin/user" class="bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">User</a>
+
+            <a routerLink="/admin/#"
+                class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Project</a>
+
+            <a routerLink="/admin/#"
+                class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Categories
+                Project</a>
+
+            <a routerLink="/admin/post"
+                class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Post</a>
+
+            <a routerLink="/admin/#"
+                class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Category
+                Posts</a>
+        </div>
+    </div>
+</nav>
+<p class="text-center">Hello</p>
+<router-outlet></router-outlet>
