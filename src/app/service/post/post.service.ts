@@ -6,7 +6,7 @@ const apiUrl = `https://assmegnt-backend-angular.vercel.app/`;
 
 @Injectable({ providedIn: 'root' })
 export class PostService {
-  urlApi = 'https://assmegnt-backend-angular.vercel.app/api/posts';
+  urlApi = 'https://lent0d-8080.preview.csb.app/api/posts';
   constructor(private httpclient: HttpClient) {}
 
   get_All_Post(): Observable<Ipost[]> {

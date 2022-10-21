@@ -7,7 +7,7 @@ import { Iprofile } from 'src/app/models/profile';
   providedIn: 'root',
 })
 export class ProfileService {
-  urlApi_profile = 'https://assmegnt-backend-angular.vercel.app/api/profile';
+  urlApi_profile = 'https://lent0d-8080.preview.csb.app/api/profile';
 
   constructor(private httpclient: HttpClient) {}
 

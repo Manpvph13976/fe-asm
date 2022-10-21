@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Iuser } from 'src/app/models/users';
-const API = `https://assmegnt-backend-angular.vercel.app/api`;
+const API = `https://lent0d-8080.preview.csb.app/api`;
 @Injectable({
   providedIn: 'root',
 })
